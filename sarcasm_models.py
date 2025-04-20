@@ -12,23 +12,23 @@ nltk.download('stopwords')
 
 # Load XGBoost model and vectorizer
 xgb_model = xgb.XGBClassifier()
-xgb_model.load_model("./models/xgboost.json")
+xgb_model.load_model("xgboost.json")
 
-with open("./models/vectorizer_xgboost.pkl", "rb") as f:
+with open("vectorizer_xgboost.pkl", "rb") as f:
     xgb_vectorizer = pickle.load(f)
 
 # Load Random Forest model and vectorizer
-with open("./models/randomforest.pkl", "rb") as file:
+with open("randomforest.pkl", "rb") as file:
     rf_classifier = pickle.load(file)
 
-with open("./models/vectorizer_randomforest.pkl", "rb") as file:
+with open("vectorizer_randomforest.pkl", "rb") as file:
     rf_vectorizer = pickle.load(file)
 
 # Load Naive Bayes model and vectorizer
-with open("./models/naivebayes.pkl", "rb") as file:
+with open("naivebayes.pkl", "rb") as file:
     nb_classifier = pickle.load(file)
 
-with open("./models/vectorizer_naivebayes.pkl", "rb") as file:
+with open("vectorizer_naivebayes.pkl", "rb") as file:
     nb_vectorizer = pickle.load(file)
 
 # Text Preprocessing Function (for Random Forest)

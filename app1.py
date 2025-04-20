@@ -9,7 +9,7 @@ from PIL import Image
 warnings.filterwarnings("ignore")
 
 # Import sarcasm models
-from models.sarcasm_models import (
+from sarcasm_models import (
     predict_sarcasm_xgboost,
     predict_sarcasm_random_forest,
     predict_sarcasm_naive_bayes,
